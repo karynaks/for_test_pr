@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Currency server</title>
+  </head>
+  <body>
+    <h1>Currency server</h1>
+    <ul>
+      <li>
+        Average exchange rate by the currency code and the date (formatted YYYY-MM-DD): <br>
+        http://localhost:{{ port }}/exchanges/one-day-rate/&lt;code&gt;/&lt;date&gt;<br>
+        <a href="http://localhost:{{ port }}/exchanges/one-day-rate/GBP/2023-04-21">http://localhost:{{ port }}/exchanges/one-day-rate/GBP/2023-04-21</a>
+      </li>
+      <li>
+        Max and min average exchange rate by the currency code and the number of last quotations N (N &le; 255):<br>
+        http://localhost:{{ port }}/exchanges/maximum-and-minimum/&lt;code&gt;/&lt;N&gt;<br>
+        <a href="http://localhost:{{ port }}/exchanges/maximum-and-minimum/GBP/23">http://localhost:{{ port }}/exchanges/maximum-and-minimum/GBP/23</a>
+      </li>
+      <li>
+        The major difference between the buy and ask rate by the currency code and the number of last quotations N (N &le; 255)<br>
+        http://localhost:{{ port }}/buy-and-sell-rates/&lt;code&gt;/&lt;N&gt;<br>
+        <a href="http://localhost:{{ port }}/buy-and-sell-rates/GBP/23">http://localhost:{{ port }}/buy-and-sell-rates/GBP/23</a>
+      </li>
+    </ul>
+  </body>
+</html>
